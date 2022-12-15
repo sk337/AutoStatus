@@ -1,0 +1,3 @@
+# Auto Status
+
+## Replit hosting 
