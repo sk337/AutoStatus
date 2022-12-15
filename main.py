@@ -15,7 +15,6 @@ def isReplit():
         return False
 
 if isReplit():
-    # import server W.I.P.
     os.getenv("apiKey") # Discourse Userapikey here
 else:
     from dotenv import load_dotenv
