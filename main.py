@@ -6,7 +6,7 @@ import re
 
 Username = "" # Discourse Username Here
 IGN = "" # Swordbattle in game name Here
-bio = "Basic bio #%place%" # user %place% as a placeholder
+bio = "Basic bio 3%place%" # user %place% as a placeholder
 
 
 def isReplit():
@@ -27,11 +27,14 @@ while True:
     req = requests.get(f"https://swordbattle.io/{IGN}")
     place = re.findall('#.*all', req.text)[0].split(" ")[0].replace("#", '')
     fullBio = bio.replace('%place%', place)
-    print(f"setting @{Username}'s bio to \n```\n{fullBio}\n```")
     req2 = requests.put(f"https://forum.codergautam.dev/users/{Username}.json", data={"bio_raw": fullBio}, headers={"Api-Key": apiKey, "Api-Username": Username})
     obj = req2.json()
-    if (obj['success']) & (obj['user']['bio_raw'] == fullBio):
-        print(f"bio succuess fully changed to {fullBio}")
-    else:
-        print("Failed to set bio")
+    try:
+        if (obj['success']):
+            print(f"bio succuess fully changed to {fullBio}")
+        else:
+            print("Failed to set bio")
+            print(obj)
+    except:
+        print(obj)
     time.sleep(60*5)
