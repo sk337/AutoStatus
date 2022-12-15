@@ -20,4 +20,4 @@ ask [@codergautam](https://forum.codergautam.dev/u/codergautam) for your an api 
 
 1. follow step 1 from repit
 
-2. put your api key from the forum  into the .env file after of `apiKey=`
+2. put your api key from the forum in `.env` replaceing `API_KEY_HERE`
