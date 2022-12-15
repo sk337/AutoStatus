@@ -32,4 +32,6 @@ while True:
     obj = req2.json()
     if (obj['success']) & (obj['user']['bio_raw'] == fullBio):
         print(f"bio succuess fully changed to {fullBio}")
+    else:
+        print("Failed to set bio")
     time.sleep(60*5)
