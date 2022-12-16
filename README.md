@@ -16,8 +16,34 @@ ask [@codergautam](https://forum.codergautam.dev/u/codergautam) for your an api 
 
 3. then press run
 
-## other services
+### other services
 
 1. follow step 1 from repit
 
 2. put your api key from the forum in `.env` replaceing `API_KEY_HERE`
+
+## keep alive
+
+### cloud providers
+
+
+#### With sudo
+
+1. run `npm i forever -g`
+
+2. run `forever start -c python3 main.py`
+
+3. relax
+
+#### without sudo
+
+1. run `npm i forever`
+
+2. run `./node_modules/forever/bin/forever start -c python3 main.py`
+
+> WARNING: This is not tested
+
+### replit
+
+TODO: add replit keepalive instrustions
+
