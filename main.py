@@ -8,7 +8,6 @@ Username = "" # Discourse Username Here
 IGN = "" # Swordbattle in game name Here
 bio = "Basic bio 3%place%" # user %place% as a placeholder
 
-
 def isReplit():
     try:
         os.environ["REPLIT_DB_URL"]
@@ -31,9 +30,9 @@ while True:
     obj = req2.json()
     try:
         if (obj['success']):
-            print(f"bio succuess fully changed to {fullBio}")
+            print(f"{time.ctime()}: bio changed to")
         else:
-            print("Failed to set bio")
+            print(f"{time.ctime()}: Failed to set bio")
             print(obj)
     except:
         print(obj)
