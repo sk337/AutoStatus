@@ -10,7 +10,7 @@ ask [@codergautam](https://forum.codergautam.dev/u/codergautam) for your an api 
 
 ### Replit
 
-1. First you need to go to main.py and fill in all the varibles.
+1. First you need to go to `config.json` and fill in all the varibles.
 
 2. then go into the secrets tab make a new secret call apiKey and pase your apikey in the value
 

@@ -2,11 +2,15 @@ import os
 import time
 import requests
 import re
+import json
 
+file=open("config.json", "r")
+config = json.load(file)
+file.close()
 
-Username = "" # Discourse Username Here
-IGN = "" # Swordbattle in game name Here
-bio = "Basic bio 3%place%" # user %place% as a placeholder
+Username = config['username']
+IGN = config['ign']
+bio = config['bio']
 
 def isReplit():
     try:
